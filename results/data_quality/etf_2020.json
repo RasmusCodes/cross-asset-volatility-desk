@@ -1,0 +1,186 @@
+{
+ "etf_monthend": {
+  "SPY": {
+   "rows": 109748,
+   "days": 12,
+   "months": 12,
+   "f_crossed": 0,
+   "f_no_bid": 3334,
+   "f_wide": 3967,
+   "f_below_intrinsic": 94,
+   "f_vendor_iv_missing": 10093,
+   "iv_status": {
+    "OK": 108361,
+    "BELOW_INTRINSIC": 1387
+   },
+   "forward_source": {
+    "parity": 421
+   },
+   "iv_vs_vendor_volpts": {
+    "n": 51526,
+    "median_monthly_wmean": 0.24228119559078098,
+    "p05_monthly_wmean": -0.9313461246358532,
+    "p95_monthly_wmean": 1.1350049431830043,
+    "mean_abs_monthly_wmean": 0.5453394987764993
+   },
+   "forward_vs_optionm_bp": {
+    "n": 421,
+    "median_monthly_wmean": 3.9883273188438855,
+    "p05_monthly_wmean": -2.894024592328208,
+    "p95_monthly_wmean": 109.80521064079772
+   }
+  },
+  "QQQ": {
+   "rows": 68290,
+   "days": 12,
+   "months": 12,
+   "f_crossed": 0,
+   "f_no_bid": 1946,
+   "f_wide": 2914,
+   "f_below_intrinsic": 62,
+   "f_vendor_iv_missing": 3941,
+   "iv_status": {
+    "OK": 67609,
+    "BELOW_INTRINSIC": 681
+   },
+   "forward_source": {
+    "parity": 263
+   },
+   "iv_vs_vendor_volpts": {
+    "n": 32110,
+    "median_monthly_wmean": 0.10212511299744458,
+    "p05_monthly_wmean": -0.5462956209185664,
+    "p95_monthly_wmean": 0.6668306393291128,
+    "mean_abs_monthly_wmean": 0.32533590521603883
+   },
+   "forward_vs_optionm_bp": {
+    "n": 263,
+    "median_monthly_wmean": 2.283922331242387,
+    "p05_monthly_wmean": -11.708280807298173,
+    "p95_monthly_wmean": 41.60637866830116
+   }
+  },
+  "IWM": {
+   "rows": 47470,
+   "days": 12,
+   "months": 12,
+   "f_crossed": 0,
+   "f_no_bid": 2431,
+   "f_wide": 3049,
+   "f_below_intrinsic": 36,
+   "f_vendor_iv_missing": 3363,
+   "iv_status": {
+    "OK": 46913,
+    "BELOW_INTRINSIC": 557
+   },
+   "forward_source": {
+    "parity": 264
+   },
+   "iv_vs_vendor_volpts": {
+    "n": 21261,
+    "median_monthly_wmean": 0.11245500763110171,
+    "p05_monthly_wmean": -0.6374802044585762,
+    "p95_monthly_wmean": 0.7456032166036555,
+    "mean_abs_monthly_wmean": 0.3409384046584118
+   },
+   "forward_vs_optionm_bp": {
+    "n": 264,
+    "median_monthly_wmean": 3.631983219811444,
+    "p05_monthly_wmean": -11.196708113444625,
+    "p95_monthly_wmean": 90.10786136160598
+   }
+  }
+ },
+ "etf_ntm": {
+  "SPY": {
+   "rows": 206058,
+   "days": 253,
+   "months": 12,
+   "f_crossed": 0,
+   "f_no_bid": 9107,
+   "f_wide": 9168,
+   "f_below_intrinsic": 228,
+   "f_vendor_iv_missing": 17343,
+   "iv_status": {
+    "OK": 203353,
+    "BELOW_INTRINSIC": 2705
+   },
+   "forward_source": {
+    "parity": 631
+   },
+   "iv_vs_vendor_volpts": {
+    "n": 93921,
+    "median_monthly_wmean": 0.11509178398469773,
+    "p05_monthly_wmean": -0.4080123505069337,
+    "p95_monthly_wmean": 0.9383131659527744,
+    "mean_abs_monthly_wmean": 0.3430614335361732
+   },
+   "forward_vs_optionm_bp": {
+    "n": 631,
+    "median_monthly_wmean": 5.564008571619034,
+    "p05_monthly_wmean": -17.75758349127765,
+    "p95_monthly_wmean": 31.495012001072027
+   }
+  },
+  "QQQ": {
+   "rows": 163622,
+   "days": 253,
+   "months": 12,
+   "f_crossed": 0,
+   "f_no_bid": 7388,
+   "f_wide": 7776,
+   "f_below_intrinsic": 443,
+   "f_vendor_iv_missing": 13620,
+   "iv_status": {
+    "OK": 160274,
+    "BELOW_INTRINSIC": 3348
+   },
+   "forward_source": {
+    "parity": 631
+   },
+   "iv_vs_vendor_volpts": {
+    "n": 74423,
+    "median_monthly_wmean": 0.04115507708371245,
+    "p05_monthly_wmean": -0.4766544765210318,
+    "p95_monthly_wmean": 0.7540812698310305,
+    "mean_abs_monthly_wmean": 0.2847934292999414
+   },
+   "forward_vs_optionm_bp": {
+    "n": 631,
+    "median_monthly_wmean": 2.1297863789559996,
+    "p05_monthly_wmean": -20.988377858367198,
+    "p95_monthly_wmean": 28.69227857057128
+   }
+  },
+  "IWM": {
+   "rows": 115222,
+   "days": 253,
+   "months": 12,
+   "f_crossed": 0,
+   "f_no_bid": 9039,
+   "f_wide": 9697,
+   "f_below_intrinsic": 64,
+   "f_vendor_iv_missing": 9108,
+   "iv_status": {
+    "OK": 113039,
+    "BELOW_INTRINSIC": 2183
+   },
+   "forward_source": {
+    "parity": 631
+   },
+   "iv_vs_vendor_volpts": {
+    "n": 48564,
+    "median_monthly_wmean": 0.010235091405174845,
+    "p05_monthly_wmean": -0.7100113525379397,
+    "p95_monthly_wmean": 0.8191299982833748,
+    "mean_abs_monthly_wmean": 0.3695116848800183
+   },
+   "forward_vs_optionm_bp": {
+    "n": 631,
+    "median_monthly_wmean": -3.22697437953534,
+    "p05_monthly_wmean": -32.728258200370426,
+    "p95_monthly_wmean": 18.129696402802445
+   }
+  }
+ }
+}

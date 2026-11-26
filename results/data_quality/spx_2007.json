@@ -1,0 +1,33 @@
+{
+ "SPX": {
+  "rows": 223928,
+  "days": 251,
+  "months": 12,
+  "f_crossed": 0,
+  "f_no_bid": 12429,
+  "f_wide": 18566,
+  "f_below_intrinsic": 6868,
+  "f_vendor_iv_missing": 16644,
+  "iv_status": {
+   "OK": 214669,
+   "BELOW_INTRINSIC": 9259
+  },
+  "forward_source": {
+   "parity": 3264,
+   "yield": 45
+  },
+  "iv_vs_vendor_volpts": {
+   "n": 99268,
+   "median_monthly_wmean": -0.07072478401453396,
+   "p05_monthly_wmean": -0.9647624551527897,
+   "p95_monthly_wmean": 0.2809435891534961,
+   "mean_abs_monthly_wmean": 0.3499695752223565
+  },
+  "forward_vs_optionm_bp": {
+   "n": 3309,
+   "median_monthly_wmean": 1.3293375542570218,
+   "p05_monthly_wmean": -27.405639804657675,
+   "p95_monthly_wmean": 26.246267740578304
+  }
+ }
+}

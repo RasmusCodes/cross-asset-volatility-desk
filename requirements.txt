@@ -1,0 +1,14 @@
+# Core (pinned to the versions the results were produced with)
+numpy==2.5.4
+scipy==1.18.1
+pandas==3.1.1
+pyarrow==26.0.1
+matplotlib==3.11.2
+statsmodels==0.15.0
+arch==9.0.0
+# Tests
+pytest==9.2.0
+mpmath==1.4.1
+# WRDS access (only needed to pull data)
+SQLAlchemy==2.1.8
+psycopg2-binary==2.9.13

@@ -1,0 +1,11 @@
+# Licensed vendor data, the cleaned store and caches never leave this machine
+/data/
+/logs/
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+# Outputs of short test runs of the backtest
+results/backtests/*_test.csv

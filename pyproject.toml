@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voldesk"
+version = "0.1.0"
+description = "Cross-asset volatility research and trading desk: surfaces, strategies, risk and forecasting on historical option data"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "RasmusCodes" }]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "pandas>=2.2",
+    "pyarrow>=16",
+    "matplotlib>=3.8",
+    "statsmodels>=0.14",
+    "arch>=7.0",
+]
+
+[project.optional-dependencies]
+wrds = ["SQLAlchemy>=2.0", "psycopg2-binary>=2.9"]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,6 @@
+rule,ann_return,ann_vol,sharpe,max_dd,turnover_per_year,rolling_vol_rmse_vs_target,avg_exposure
+target 15% with EWMA,0.059174,0.15635,0.37848,-0.64611,8.2822,0.022303,1.1136
+target 15% with GJR,0.050556,0.13901,0.36368,-0.62474,8.5071,0.027362,0.97294
+target 15% with logHAR_pk_VIX,0.049961,0.14387,0.34727,-0.60926,12.451,0.025364,1.042
+target 15% with VIX_raw,0.042042,0.12004,0.35024,-0.49367,10.353,0.039024,0.85901
+buy and hold,0.061568,0.19221,0.32031,-0.83876,0,0.096754,1

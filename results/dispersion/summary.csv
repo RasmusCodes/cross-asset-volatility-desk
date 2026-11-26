@@ -1,0 +1,10 @@
+trade,units,cycles,mean,median,hit_rate,sharpe_ann,t_stat,worst,max_dd,share_traded
+"dispersion (ATM strikes), gross",variance points,354,0.00729817,-0.000413328,0.483051,0.751917,4.08396,-0.121184,-0.318859,
+"dispersion (ATM strikes), net of base costs",variance points,354,-0.00297208,-0.00868796,0.274011,-0.308681,-1.67656,-0.15634,-2.03085,
+"dispersion (ATM strikes), net of 2x costs",variance points,354,-0.0132423,-0.0166999,0.183616,-1.36903,-7.43575,-0.191496,-4.81191,
+"dispersion (index strike = VIX^2), gross",variance points,354,0.0174743,0.00789708,0.734463,1.74957,9.50259,-0.0607523,-0.075627,
+"dispersion (index strike = VIX^2), net",variance points,354,0.00720409,-0.00154014,0.457627,0.745423,4.04868,-0.0828792,-0.543563,
+"short correlation swap, gross",correlation points,354,0.0429162,0.0436201,0.629944,0.93246,5.06456,-0.480377,-5.36968,
+"short correlation swap, net",correlation points,354,0.0229162,0.0236201,0.559322,0.497911,2.70435,-0.500377,-7.16968,
+"short correlation swap, net, only if implied - HAR forecast > 0.10",correlation points,307,0.039786,0,0.228013,1.40042,7.08334,-0.30192,-0.30192,0.225989
+"dispersion (ATM), net, only if implied - HAR forecast > 0.10",variance points,307,-0.00345836,0,0.0390879,-0.81612,-4.12793,-0.15634,-1.06172,0.225989

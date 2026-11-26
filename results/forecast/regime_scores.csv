@@ -1,0 +1,13 @@
+subset,model,n,event_rate,brier,log_loss,auc
+all days,base_rate,6497,0.120363,0.107346,0.374192,0.396421
+all days,logit_vix,6497,0.120363,0.0661655,0.234878,0.881919
+all days,logit_rv,6497,0.120363,0.0691427,0.24054,0.877765
+all days,logit_hmm,6497,0.120363,0.0803827,0.264532,0.842051
+all days,logit_vix_hmm,6497,0.120363,0.0672271,0.235371,0.883842
+all days,logit_all,6497,0.120363,0.0691934,0.240722,0.881033
+calm days (trailing 22d vol < 25%),base_rate,5706,0.0597617,0.0625269,0.258773,0.319906
+calm days (trailing 22d vol < 25%),logit_vix,5706,0.0597617,0.0528102,0.200494,0.784038
+calm days (trailing 22d vol < 25%),logit_rv,5706,0.0597617,0.0519781,0.196275,0.782903
+calm days (trailing 22d vol < 25%),logit_hmm,5706,0.0597617,0.0578972,0.208618,0.740877
+calm days (trailing 22d vol < 25%),logit_vix_hmm,5706,0.0597617,0.0536421,0.20004,0.790072
+calm days (trailing 22d vol < 25%),logit_all,5706,0.0597617,0.0544156,0.202353,0.790611
