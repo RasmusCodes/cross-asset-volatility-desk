@@ -9,7 +9,7 @@ description = "Cross-asset volatility research and trading desk: surfaces, strat
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "RasmusCodes" }]
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.0",
     "scipy>=1.13",

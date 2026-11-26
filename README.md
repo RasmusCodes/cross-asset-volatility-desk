@@ -61,7 +61,7 @@ tests/          35 tests on synthetic data (no WRDS needed)
 
 ## Reproduce
 
-Requires Python 3.11+ and, for the data, WRDS access to OptionMetrics IvyDB US, Cboe option data, Datastream
+Requires Python 3.12+ and, for the data, WRDS access to OptionMetrics IvyDB US, Cboe option data, Datastream
 futures and CRSP.
 
 ```bash
