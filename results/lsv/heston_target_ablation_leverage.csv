@@ -1,0 +1,25 @@
+date,run,t,h,share_supported,L_p01,L_p50,L_p99
+2017-06-30,"heston_target Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.0105,0.00546675,0.99995,0.923494,0.988962,1.29795
+2017-06-30,"heston_target Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.0211,0.0054434,0.99987,0.951503,0.985641,1.20056
+2017-06-30,"heston_target Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.05,0.00569434,0.99977,0.984711,0.992718,1.12558
+2017-06-30,"heston_target Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.0993,0.0063884,0.99964,0.983615,0.995995,1.08201
+2017-06-30,"heston_target Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.25,0.00799662,0.99944,0.987273,1.00245,1.09552
+2017-06-30,"heston_target Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.4991,0.0133039,0.99925,0.985927,0.999693,1.01856
+2017-06-30,"heston_target local linear, t_min 0.25, daily steps",0.0105,0.00546675,0.99993,0.940458,0.981617,1.34137
+2017-06-30,"heston_target local linear, t_min 0.25, daily steps",0.0211,0.0054434,0.999915,0.951712,0.979881,1.22022
+2017-06-30,"heston_target local linear, t_min 0.25, daily steps",0.05,0.00569434,0.99984,0.978315,0.98467,1.1259
+2017-06-30,"heston_target local linear, t_min 0.25, daily steps",0.0993,0.0063884,0.9996,0.979008,0.991088,1.07053
+2017-06-30,"heston_target local linear, t_min 0.25, daily steps",0.25,0.00799662,0.99943,0.983917,1.00107,1.08648
+2017-06-30,"heston_target local linear, t_min 0.25, daily steps",0.4991,0.0133039,0.999265,0.981966,0.998626,1.01749
+2017-06-30,"heston_target local linear, t_min 0.25, graded steps",0.0099,0.00547174,0.999945,0.962895,0.995011,1.03758
+2017-06-30,"heston_target local linear, t_min 0.25, graded steps",0.0199,0.00544337,0.999905,0.96126,0.983974,1.03284
+2017-06-30,"heston_target local linear, t_min 0.25, graded steps",0.05,0.00567868,0.999715,0.970748,0.979058,1.02181
+2017-06-30,"heston_target local linear, t_min 0.25, graded steps",0.1,0.00638136,0.99969,0.97226,0.990597,1.01764
+2017-06-30,"heston_target local linear, t_min 0.25, graded steps",0.25,0.0079876,0.999335,0.979115,1.00188,1.01766
+2017-06-30,"heston_target local linear, t_min 0.25, graded steps",0.4997,0.0133104,0.99928,0.961538,0.998268,1.02099
+2017-06-30,"heston_target local linear, t_min 0.05, graded steps (used)",0.0099,0.00244704,0.999855,0.989097,0.996982,1.03309
+2017-06-30,"heston_target local linear, t_min 0.05, graded steps (used)",0.0199,0.00243435,0.999735,0.989859,0.99398,1.03141
+2017-06-30,"heston_target local linear, t_min 0.05, graded steps (used)",0.05,0.00253958,0.999455,0.977602,0.994158,1.02945
+2017-06-30,"heston_target local linear, t_min 0.05, graded steps (used)",0.1,0.00403592,0.99952,0.97483,0.995515,1.04448
+2017-06-30,"heston_target local linear, t_min 0.05, graded steps (used)",0.25,0.0079876,0.999365,0.982182,0.999978,1.01946
+2017-06-30,"heston_target local linear, t_min 0.05, graded steps (used)",0.4997,0.0133104,0.99942,0.967585,0.997833,1.02155

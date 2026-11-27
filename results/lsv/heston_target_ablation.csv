@@ -1,0 +1,13 @@
+date,variant,T,n_strikes,rmse_volpts,maxabs_volpts,se_median,max_absz
+2017-06-30,"Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.05,9,0.146562,0.318916,0.0154531,17.7472
+2017-06-30,"Nadaraya-Watson, t_min 0.25, daily steps (paper)",0.25,9,0.100028,0.220931,0.0203863,9.63343
+2017-06-30,"Nadaraya-Watson, t_min 0.25, daily steps (paper)",1,9,0.0180209,0.0413025,0.0254421,0.994213
+2017-06-30,"local linear, t_min 0.25, daily steps",0.05,9,0.132845,0.301905,0.0154162,16.7188
+2017-06-30,"local linear, t_min 0.25, daily steps",0.25,9,0.0748393,0.182524,0.0203464,7.9901
+2017-06-30,"local linear, t_min 0.25, daily steps",1,9,0.0281915,0.044598,0.0254251,2.57379
+2017-06-30,"local linear, t_min 0.25, graded steps",0.05,9,0.0468546,0.0924181,0.0153522,9.77644
+2017-06-30,"local linear, t_min 0.25, graded steps",0.25,9,0.0654878,0.0772054,0.0201981,4.92168
+2017-06-30,"local linear, t_min 0.25, graded steps",1,9,0.0652292,0.089509,0.0253403,3.01411
+2017-06-30,"local linear, t_min 0.05, graded steps (used)",0.05,9,0.0119973,0.0285306,0.0154209,1.78856
+2017-06-30,"local linear, t_min 0.05, graded steps (used)",0.25,9,0.0382101,0.0516092,0.0202307,2.49583
+2017-06-30,"local linear, t_min 0.05, graded steps (used)",1,9,0.0572585,0.0803119,0.025349,2.66662

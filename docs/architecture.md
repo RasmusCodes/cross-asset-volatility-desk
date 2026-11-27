@@ -9,8 +9,8 @@
         ▼
  data/store/  (one cleaned row per contract and day; forwards per expiry)
         │
-        ├── voldesk.surface   slices → SVI / SSVI / eSSVI / SABR / Heston fits → arbitrage, local vol, rough checks
-        │      scripts/surface_panel.py, surface_sensitivity.py, rough_study.py
+        ├── voldesk.surface   slices → SVI / SSVI / eSSVI / SABR / Heston fits → arbitrage, local vol, LSV, rough Bergomi
+        │      scripts/surface_panel.py, surface_sensitivity.py, rough_study.py, lsv_study.py
         ├── voldesk.backtest  daily engine over the store + voldesk.strategies (costs, margin, attribution)
         │      scripts/run_backtests.py, summarize_backtests.py
         ├── voldesk.forecast  walk-forward models over daily panels (SPX bars, VIX, surfaces, futures, members)
@@ -51,5 +51,11 @@
   errors; the two agree to 1e-7 in price in the tests.
 * SVI: Zeliade's quasi-explicit start, then SLSQP with box bounds and butterfly/Lee constraints on a grid reaching far
   beyond the quotes; calendar order is imposed only where both slices are quoted and only if it is cheap.
-* Rough Bergomi: exact joint Gaussian simulation of the Volterra process and the price driver by Cholesky
-  factorization of their covariance (fine for a few hundred steps).
+* Rough Bergomi: exact joint Gaussian simulation of the Volterra process and its Brownian driver by Cholesky
+  factorization of their covariance (fine for a few hundred steps), the forward variance curve read off the eSSVI
+  surface, and the mixing estimator (the price driver's independent part integrated out in closed form). Calibration
+  uses common random numbers, so the objective is smooth in (H, η, ρ) and a least-squares optimiser works.
+* Local-stochastic volatility: particle method (Guyon & Henry-Labordère) with local-linear kernel regression on
+  binned particles (O(N) per step), full-truncation Euler for the variance and a conditionally lognormal log-price
+  step, so the simulated forward is an exact martingale. Pure local vol and pure Heston run through the same scheme
+  and time grid, so differences between the three are model differences.

@@ -16,7 +16,12 @@ backtest results. Everything in it is computed in the browser from fitted parame
   calendar arbitrage in its extrapolated wings (8% of grid points). eSSVI and SSVI are arbitrage-free on every date
   at two to three times the error; SABR (β = 1) is the practical compromise and extrapolates wings best; Heston fits
   worst (0.97) and its short-dated skew is too flat. The ATM-skew power law of rough volatility is in the data
-  (slope −0.33, H ≈ 0.17), but fitted Heston surfaces reproduce the same slope over one week to six months.
+  (slope −0.33, H ≈ 0.17), but fitted Heston surfaces reproduce the same slope over one week to six months, and on
+  two calibrated dates rough Bergomi fits the 17-day to 4-month quotes no better than Heston refitted to the same
+  quotes (0.61 vs 0.58 vol points in June 2017, 1.78 vs 1.59 in March 2020), once its time grid is fine enough at
+  three weeks. Local-stochastic volatility reprices the arbitrage-free surface's vanillas to 0.05-0.11 vol points; with
+  Heston's full vol-of-vol its forward skew and cliquet prices follow Heston, not local vol (cliquet 1.7-2.4 times
+  the local-vol price), which the vanillas alone cannot arbitrate.
 * **Strategies** ([report 03](reports/03_strategies.md)). Selling index volatility earned a premium before costs
   (short ATM straddle +5.3% of notional a year, Sharpe 0.44) paid for with crash losses (worst day −10.5%). Costs decide
   most of the rest: base costs halve the delta-hedged straddle's return and stressed costs erase it; calendars,
@@ -43,8 +48,8 @@ src/voldesk/
   pricing/      Black-Scholes / Black-76, Greeks to third order, implied vol, dividends, American lattices
   data/         WRDS pulls with a manifest (wrds, catalog), cleaning (chains, calendar, rates), store readers,
                 point-in-time universe, SYNTHETIC fallback for tests
-  surface/      SVI / SSVI / eSSVI, SABR, Heston (COS + quadrature), local vol, Andreasen-Huge, rough Bergomi,
-                arbitrage diagnostics, the model-comparison harness (compare)
+  surface/      SVI / SSVI / eSSVI, SABR, Heston (COS + quadrature), local vol, Andreasen-Huge, local-stochastic
+                vol (particle method), rough Bergomi, arbitrage diagnostics, the model-comparison harness (compare)
   strategies/   positions, Greeks, Taylor attribution, builders, costs, margin (strategy-based + portfolio),
                 scenario risk / VaR, hedging simulations
   backtest/     daily mark-to-market engine, strategy library, metrics
@@ -56,7 +61,7 @@ reports/        01-05 research reports and figures
 results/        small derived tables the reports cite
 demo/           the browser terminal (vanilla JS, no build step) and its data bundle
 docs/           architecture, data access, limitations
-tests/          35 tests on synthetic data (no WRDS needed)
+tests/          48 tests on synthetic data (no WRDS needed)
 ```
 
 ## Reproduce
@@ -66,7 +71,7 @@ futures and CRSP.
 
 ```bash
 python -m venv .venv && .venv/bin/pip install -r requirements.txt && .venv/bin/pip install -e .
-pytest                                   # 35 tests, synthetic data only
+pytest                                   # 48 tests, synthetic data only
 ```
 
 With WRDS access (log in once so the PostgreSQL password file holds the WRDS line; see [docs/data.md](docs/data.md)):
@@ -76,6 +81,8 @@ python scripts/pull_data.py --stage all          # ~100M rows, ~2.6 GB parquet, 
 python scripts/build_store.py --source om         # clean SPX 1996-2025
 python scripts/build_store.py --source cboe       # SPX 2025-07 .. 2026-11
 python scripts/surface_panel.py --set monthend    # model comparison (hours; checkpointed)
+python scripts/rough_study.py                     # ATM-skew power law + rough Bergomi vs Heston on two dates
+python scripts/lsv_study.py --second-seed --particles 200000 --paths 400000    # LSV vs local vol vs Heston
 python scripts/run_backtests.py && python scripts/summarize_backtests.py
 python scripts/forecast_study.py --section all && python scripts/forecast_economics.py
 python scripts/dispersion_study.py

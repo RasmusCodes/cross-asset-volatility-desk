@@ -20,8 +20,20 @@ What the results can and cannot support, in one place.
 
 * Surface comparisons use AM-settled standard monthlies from 7 days to 3 years: nothing is said about weeklies,
   dailies or 0DTE options, which is also why the rough-volatility test cannot separate rough from Markovian models.
-* The rough Bergomi calibration was coarse (flat forward variance, small grid) and is not a fair test of the model.
-* Local-stochastic volatility was not implemented.
+* Local-stochastic volatility and rough Bergomi were calibrated on two dates (30 June 2017 and 31 March 2020), not
+  on the panel: they show what the models do on a calm and a stressed surface, not how they rank over 30 years.
+* The LSV variance process takes the full vol-of-vol of each date's Heston fit. How much of the smile should come
+  from stochastic rather than local volatility (the "mixing") is not identified by vanilla quotes; it would take
+  forward-start or cliquet prices, which this dataset does not contain. The exotic prices in report 02 are model
+  comparisons, not marks.
+* Rough Bergomi gets its forward variance curve from the eSSVI surface's variance-swap strip, which leans on eSSVI's
+  extrapolated wings, and is scored only on maturities up to about four months.
+* Rough Bergomi Monte Carlo converges slowly in the time step at short expiries. The fits use at least 400 steps
+  inside every expiry; the call wing of the 17- and 21-day smiles is still 0.2-0.3 vol points from its 1,600-step
+  value, so on the calm date the comparison with Heston (0.61 against 0.58) is a tie within numerical error.
+* LSV reprices the vanillas close to, not entirely within, Monte Carlo error: small systematic deviations remain at
+  the shortest expiries (up to 0.08-0.12 vol points on average), of the same size as pure local vol's on the same
+  time grid.
 
 ## Backtests
 
